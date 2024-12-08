@@ -33,7 +33,7 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className={`w-screen h-screen flex justify-center items-center`}>
+    <div className={`w-screen h-screen flex justify-center items-center px-5`}>
       <motion.div drag
                   dragConstraints={{top: 0, right: 0, bottom: 0, left: 0}}
                   dragElastic={0.05}
