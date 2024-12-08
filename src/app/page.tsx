@@ -2,6 +2,7 @@
 import Image from "next/image";
 import {motion} from "motion/react";
 import React, {RefObject, useRef, useState} from "react";
+import {Footer} from "@/components/Footer";
 
 const files = [
   '对吗1.wav',
@@ -29,13 +30,12 @@ export default function Home() {
   };
 
   return (
-    <div style={{
-      cursor: cursorStyle
-    }}
+    <div style={{cursor: cursorStyle}}
          className={`w-screen h-screen flex justify-center items-center px-5 select-none`}
          onMouseDown={handleMouseDown}
          onMouseUp={handleMouseUp}>
       <HearthStoneEmote/>
+      <Footer/>
     </div>
   );
 }
@@ -77,4 +77,3 @@ const Audio: React.FC<{ src: string, ref: RefObject<HTMLAudioElement | null> }>
     <audio className={`hidden`} ref={ref} preload='auto' src={src}></audio>
   )
 }
-
