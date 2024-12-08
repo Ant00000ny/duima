@@ -18,10 +18,23 @@ const files = [
 ]
 
 export default function Home() {
+  const [cursorStyle, setCursorStyle] = useState('url(/cursor/Hearthstone-Hand.png), default');
 
+  const handleMouseDown = () => {
+    setCursorStyle('url(/cursor/Hearthstone-Hand.png), default');
+  };
+
+  const handleMouseUp = () => {
+    setCursorStyle('url(/cursor/Hearthstone-Hand-Text.png), default');
+  };
 
   return (
-    <div className={`w-screen h-screen flex justify-center items-center px-5`}>
+    <div style={{
+      cursor: cursorStyle
+    }}
+         className={`w-screen h-screen flex justify-center items-center px-5 select-none`}
+         onMouseDown={handleMouseDown}
+         onMouseUp={handleMouseUp}>
       <HearthStoneEmote/>
     </div>
   );
