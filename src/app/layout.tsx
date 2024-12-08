@@ -1,4 +1,4 @@
-import type {Metadata} from "next";
+import type {Metadata, Viewport} from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import React from "react";
@@ -19,6 +19,12 @@ export const metadata: Metadata = {
   title: "对...对吗？",
   description: "不准对我心爱的老师大放厥词！",
 };
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  width: 'device-width',
+  maximumScale: 1
+}
 
 export default function RootLayout({
                                      children,
